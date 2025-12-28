@@ -1,0 +1,9 @@
+# Git ignore
+.DS_Store
+/vendor/
+.env
+*.log
+
+# Docker files
+# Dockerfile
+# docker-compose.yml
