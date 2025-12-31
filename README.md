@@ -38,8 +38,8 @@ NewsTrack-CMS is a lightweight, professional News Management System built with P
    Open your browser and navigate to `http://localhost:8080/login.php`.
 
 4. **Default Credentials:**
-   - **Email:** `admin@example.com`
-   - **Password:** `password123`
+   - **Email:** `mariam@gmail.com`
+   - **Password:** `1234567`
 
 ### How to Stop and Clean Up
 To stop the containers and remove them:
