@@ -1,90 +1,78 @@
-NewsTrack-CMS
-NewsTrack-CMS is a lightweight, professional News Management System built with PHP and MySQL. It provides a clean interface for managing news articles, categories, and user authentication.
+NewsTrack-CMS 📰
+NewsTrack-CMS is a lightweight, professional News Management System built with PHP and MySQL. It provides a clean interface for managing news articles, categories, and user authentication with full RTL support.
 
-Tech Stack
+💻 Tech Stack
 Backend: PHP 8.2
 
 Database: MySQL 8.0
 
-Frontend: HTML5, CSS3 (RTL Support)
+Frontend: HTML5, CSS3 (Arabic RTL Support)
 
-Containerization: Docker, Docker Compose
+Containerization: Docker & Docker Compose
 
 Cloud/VPS Environment: GitHub Codespaces (Linux-based Cloud Instance)
 
-Features
-User Registration and Login
-
-News Article Management (Add, Edit, Delete)
-
-Category Management
-
-Soft-delete functionality (Trash bin)
-
-Image upload support
-
-Fully responsive Arabic interface
-
 🚀 Deployment on VPS / Cloud Environment
-This section describes how to deploy the project on a VPS or a cloud-based instance like GitHub Codespaces.
+This project is designed to be easily deployed on any Linux-based VPS or Cloud environment (e.g., Claw Cloud, AWS, or GitHub Codespaces).
 
 1. Prerequisites
-Before starting, ensure the environment has Git and Docker installed.
+Ensure that Git and Docker are installed on your VPS. You can verify this by running:
 
 Bash
 
-# Verify installation
 git --version
 docker --version
 2. Clone the Repository
+Clone the project from GitHub to your VPS:
+
 Bash
 
 git clone https://github.com/tomanmariam/NewsTrack-CMS.git
 cd NewsTrack-CMS
 3. Build and Run using Docker
-To build the image and run the container manually:
+To build the Docker image and run the container manually on the VPS:
 
 Bash
 
 # Build the Docker Image
 docker build -t newstrack-app .
 
-# Run the Container
+# Run the Container (Mapping VPS port 8080 to Container port 80)
 docker run -d -p 8080:80 --name my-final-app newstrack-app
-4. Verification & Production URL
-To verify that the server is running successfully, check the container status and logs:
+4. Verification
+To ensure the deployment was successful, check the container status and server logs:
 
 Bash
 
-# Check running containers
+# Verify the container is running
 docker ps
 
-# View application logs (Confirmation of Apache/PHP status)
+# Check server logs for confirmation
 docker logs my-final-app
-Production URL: The project is accessible via the forwarded cloud port (e.g., https://[codespace-name]-8080.app.github.dev). Note: Deployment was verified through Docker Logs showing "Apache configured -- resuming normal operations".
+Confirmation: The logs should show "Apache/2.4.65 configured -- resuming normal operations".
 
-🛠 Local Development (How to Run)
-Build and start the containers:
+🌐 Production URL
+The project is deployed and live at: URL: https://supreme-spork-jjp4qvpxq96qf9wx-8000.app.github.dev/
+
+🛠 Local Development (Quick Start)
+If you prefer using Docker Compose for local development:
+
+Start the environment:
 
 Bash
 
 docker-compose up --build -d
-Access the application: Open your browser and navigate to http://localhost:8080/login.php.
+Access the app: http://localhost:8080/login.php
 
-Default Credentials:
-
-Email: mariam@gmail.com
+Credentials: - Email: mariam@gmail.com
 
 Password: 1234567
 
-Configuration
-Ports: The application runs on port 8080 (External) mapped to 80 (Internal).
+📝 Deployment Notes & Challenges
+Challenges Faced: During deployment on the cloud environment, the primary challenge was Port Forwarding visibility and browser redirection issues.
 
-Database: MySQL is configured on port 3306 internally.
+Solution:
 
-Challenges & Solutions
-During the deployment on the cloud environment (GitHub Codespaces), the main challenge was Port Forwarding visibility. This was overcome by:
+Manually mapped the container to port 80 internally to align with the cloud environment’s web server expectations.
 
-Mapping the container to port 80 internally to match the cloud's default web server.
-
-Verifying the deployment through Docker Logs to ensure the Apache service started correctly even when the browser UI faced redirection issues.
+Verified successful deployment via Docker Logs to confirm the Apache service was healthy even when the browser interface was inaccessible due to platform-specific networking restrictions.
