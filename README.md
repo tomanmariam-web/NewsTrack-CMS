@@ -52,7 +52,7 @@ docker logs my-final-app
 Confirmation: The logs should show "Apache/2.4.65 configured -- resuming normal operations".
 
 🌐 Production URL
-The project is deployed and live at: URL: https://supreme-spork-jjp4qvpxq96qf9wx-8000.app.github.dev/
+The project is deployed and live at: URL: https://supreme-spork-jjp4qvpxq96qf9wx-8080.app.github.dev/login.php
 
 🛠 Local Development (Quick Start)
 If you prefer using Docker Compose for local development:
